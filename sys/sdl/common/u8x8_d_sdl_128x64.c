@@ -18,7 +18,7 @@ SDL_Window *u8g_sdl_window;
 SDL_Surface *u8g_sdl_screen;
 #endif
 
-int u8g_sdl_multiple = 3;
+int u8g_sdl_multiple = 5;
 uint32_t u8g_sdl_color[256];
 int u8g_sdl_height, u8g_sdl_width;
 
