@@ -28506,6 +28506,15 @@ class U8G2_GP1294AI_256X48_F_2ND_4W_HW_SPI : public U8G2 {
   }
 };
 
+class U8G2_SDL_128X64: public U8G2 {
+  public: U8G2_SDL_128X64(const u8g2_cb_t *rotation) : U8G2() {
+    u8g2_SetupBuffer_SDL_128x64_4(&u8g2, rotation);
+    u8x8_InitDisplay(u8g2_GetU8x8(&u8g2));
+    u8x8_SetPowerSave(u8g2_GetU8x8(&u8g2), 0);
+    u8g2_ClearBuffer(&u8g2);
+  }
+};
+
 /* Arduino constructor list end */
 
 #endif // U8X8_USE_PINS
