@@ -1,6 +1,6 @@
 
 #ifndef NO_SDL
-#include "SDL.h"
+#include "SDL2/SDL.h"
 #endif
 
 /* return ascii key value or -1 */

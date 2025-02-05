@@ -4,7 +4,7 @@
 
 #include "u8g2.h"
 #ifndef NO_SDL
-#include "SDL.h"
+#include "SDL2/SDL.h"
 #endif
 #include <assert.h>
 
@@ -103,7 +103,7 @@ static void u8g_sdl_init(int width, int height)
     exit(1);
   }
   
-  u8g_sdl_window = SDL_CreateWindow("U8g2", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, u8g_sdl_width * u8g_sdl_multiple, u8g_sdl_height * u8g_sdl_multiple, 0);
+  u8g_sdl_window = SDL_CreateWindow("U8g2", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, u8g_sdl_width * u8g_sdl_multiple, u8g_sdl_height * u8g_sdl_multiple, SDL_WINDOW_UTILITY);
 
   if ( u8g_sdl_window == NULL )
   {
